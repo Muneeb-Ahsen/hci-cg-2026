@@ -33,6 +33,7 @@
       <li><a href="analysis.html">Interaction Analysis</a></li>
       <li><a href="norman2klm.html" aria-current="page">Norman–GOMS–KLM</a></li>
       <li><a href="assignment01.html">Lab 01 Rules</a></li>
+      <li><a href="Error.html">HTML Audit</a></li>
 
     </ul>
   </nav>
@@ -195,6 +196,48 @@ H[mouse] M P B[LEFT]
       </p>
     </section>
 
+    <!-- Worked example 2: Relevant to Muneeb's work -->
+    <section>
+      <h2>Applied Example: Marking Attendance in Mobile App</h2>
+
+      <p>
+        Example task: Using Muneeb's Attendance Management System, a student marks themselves present
+        for a class by tapping the attendance button on their phone.
+      </p>
+
+      <ol>
+        <li>Unlock phone (already unlocked, so skip)</li>
+        <li>Locate the Attendance app icon on home screen</li>
+        <li>Tap app to launch</li>
+        <li>Tap "Mark Attendance" button</li>
+        <li>System provides visual feedback (checkmark appears)</li>
+        <li>Return to home screen (system auto-navigates)</li>
+      </ol>
+
+      <p>One possible KLM operator sequence:</p>
+
+      <pre>
+M P [App Icon]
+K [Tap]
+R [App loads]
+M P [Mark Attendance Button]
+K [Tap]
+R [Feedback displayed]
+      </pre>
+
+      <p>
+        <strong>Estimated execution time:</strong><br>
+        M: 1.35s | P: 1.1s | K: 0.2s | R: 2.0s (app load) + R: 0.5s (feedback)<br>
+        Total ≈ <strong>6.3 seconds</strong> for expert, error-free performance.
+      </p>
+
+      <p>
+        This demonstrates how KLM can evaluate the efficiency of a mobile interface.
+        Norman's Action Cycle would additionally consider the user's perception of
+        the feedback and their mental evaluation—is the attendance actually marked?
+      </p>
+    </section>
+
     <!-- Key takeaways -->
     <section>
       <h2>Key Takeaways</h2>
@@ -214,6 +257,17 @@ H[mouse] M P B[LEFT]
           <strong>
             KLM has only seven operators because it models execution,
             not thinking about what to do.
+          </strong>
+        </p>
+      </blockquote>
+
+      <blockquote class="key-takeaway">
+        <p>
+          <strong>
+            To design efficient mobile interfaces, understanding KLM operators helps
+            identify bottlenecks (e.g., long system response times [R]) that impact
+            user experience. Combining KLM with Norman's Action Cycle provides a more
+            complete picture of usability.
           </strong>
         </p>
       </blockquote>

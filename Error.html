@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10 Common HTML Errors</title>
+    <style>
+        body {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+        }
+        header {
+            background-color: #ff5555;
+            color: #282a36;
+        }
+        nav {
+            background-color: #44475a;
+        }
+        nav a {
+            color: #f8f8f2;
+        }
+        nav a[aria-current="page"] {
+            background-color: #ff5555;
+            color: #282a36;
+            font-weight: bold;
+        }
+        article {
+            background-color: #44475a;
+        }
+        h3 {
+            color: #ff79c6;
+        }
+        code {
+            color: #f1fa8c;
+        }
+        footer {
+            background-color: #44475a;
+            color: #6272a4;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>HTML Proficiency Audit</h1>
+        <p>10 Common Errors & Semantic Fixes</p>
+    </header>
+
+    <nav aria-label="Primary navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="analysis.html">Interaction Analysis</a></li>
+            <li><a href="norman2klm.html">Norman–GOMS–KLM</a></li>
+            <li><a href="assignment01.html">Lab 01 Rules</a></li>
+            <li><a href="Error.html" aria-current="page">HTML Audit</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Semantic HTML Corrections</h2>
+
+            <article>
+                <h3>1. Missing Alt Text</h3>
+                <p>Error: <code>&lt;img src="pic.jpg"&gt;</code></p>
+                <p>Fix: <code>&lt;img src="pic.jpg" alt="Description"&gt;</code></p>
+            </article>
+
+            <article>
+                <h3>2. Block inside Inline</h3>
+                <p>Error: <code>&lt;a&gt;&lt;div&gt;...&lt;/div&gt;&lt;/a&gt;</code> (Pre-HTML5 issue)</p>
+                <p>Fix: Use CSS for block display.</p>
+            </article>
+
+            <article>
+                <h3>3. Non-Unique IDs</h3>
+                <p>Error: <code>id="nav"</code> used twice.</p>
+                <p>Fix: Use <code>class="nav"</code> instead.</p>
+            </article>
+
+            <article>
+                <h3>4. Skipped Heading Levels</h3>
+                <p>Error: <code>h1</code> followed by <code>h4</code>.</p>
+                <p>Fix: Use <code>h1</code>, then <code>h2</code>, then <code>h3</code>.</p>
+            </article>
+
+            <article>
+                <h3>5. Missing Form Labels</h3>
+                <p>Error: Input without <code>&lt;label&gt;</code>.</p>
+                <p>Fix: Always link label via <code>for="id"</code>.</p>
+            </article>
+
+            <article>
+                <h3>6. Deprecated Tags</h3>
+                <p>Error: <code>&lt;center&gt;</code>, <code>&lt;font&gt;</code>.</p>
+                <p>Fix: Use CSS for alignment and styling.</p>
+            </article>
+
+            <article>
+                <h3>7. Empty Links</h3>
+                <p>Error: <code>&lt;a href="#"&gt;&lt;/a&gt;</code>.</p>
+                <p>Fix: Add text or <code>aria-label</code>.</p>
+            </article>
+
+            <article>
+                <h3>8. Justified Text</h3>
+                <p>Error: <code>align="justify"</code>.</p>
+                <p>Fix: Avoid (bad for dyslexic users).</p>
+            </article>
+
+            <article>
+                <h3>9. Div Soup</h3>
+                <p>Error: Using div for everything.</p>
+                <p>Fix: Use <code>main</code>, <code>article</code>, <code>section</code>.</p>
+            </article>
+
+            <article>
+                <h3>10. Missing Lang Attribute</h3>
+                <p>Error: <code>&lt;html&gt;</code>.</p>
+                <p>Fix: <code>&lt;html lang="en"&gt;</code>.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Demonstrating Lab 01 Requirements.</p>
+    </footer>
+
+</body>
+</html>
